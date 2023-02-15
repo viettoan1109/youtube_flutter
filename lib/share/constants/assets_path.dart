@@ -2,6 +2,7 @@ class AssetsImagePath {
   static const imgPath = "assets/img";
 
   static const imgLogo = "$imgPath/img_logo.png";
+  static const imgLogoSplash = "$imgPath/img_youtube.png";
   static const imgHome = "$imgPath/img_home.png";
   static const imgHomeSelect = "$imgPath/img_home_select.png";
   static const imgTrending = "$imgPath/img_trending.png";

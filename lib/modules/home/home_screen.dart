@@ -13,7 +13,7 @@ class HomeScreen extends GetView<HomeController> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
-        child: Obx(() => _buildWidget()),
+        child: Obx(() => _buildWidgetMobile()),
       ),
     );
   }
@@ -36,7 +36,11 @@ class HomeScreen extends GetView<HomeController> {
     }
 
     return AppBar(
-      leading: Image.asset(AssetsImagePath.imgLogo),
+      elevation: 1,
+      leading: Container(
+        padding: const EdgeInsets.all(12),
+        child: SvgPicture.asset(AssetsSvgPath.icLogo),
+      ),
       backgroundColor: Colors.white,
       title: GradientText(title,
           gradient: const LinearGradient(
@@ -66,7 +70,7 @@ class HomeScreen extends GetView<HomeController> {
     );
   }
 
-  Widget _buildWidget() {
+  Widget _buildWidgetMobile() {
     return Scaffold(
       appBar: _appBar(),
       body: _buildTabs(controller.currentTab.value),
@@ -97,7 +101,7 @@ class HomeScreen extends GetView<HomeController> {
         backgroundColor: Colors.white,
         unselectedItemColor: Colors.black,
         currentIndex: controller.getCurrentIndex(controller.currentTab.value),
-        selectedItemColor: ColorConstants.orangeFE6603,
+        selectedItemColor: ColorConstants.red,
         selectedLabelStyle: const TextStyle(fontSize: 10),
         unselectedLabelStyle: const TextStyle(fontSize: 10),
         onTap: (index) => controller.switchTab(index),

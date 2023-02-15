@@ -13,12 +13,11 @@ class SplashScreen extends GetView<SplashController> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
-         /* child: Image.asset(
-        AssetsImagePath.imgLogo,
+          child: Image.asset(
+        AssetsImagePath.imgLogoSplash,
         height: 150,
         width: 150,
-      )*/
-      child: SvgPicture.asset(AssetsSvgPath.icHomeSelect),),
+      )),
     );
   }
 }

@@ -20,6 +20,10 @@ class HomeController extends GetxController {
     searchTab = const SearchTab();
   }
 
+  Future<void> loadData() async{
+
+  }
+
   int getCurrentIndex(HomePageTabs tab) {
     switch (tab) {
       case HomePageTabs.home:
